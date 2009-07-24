@@ -1,0 +1,100 @@
+"ModelPack"
+{
+	"LCARS DoorPanel"
+	{
+		"categories"	"button"
+		"model"			"models/LCARS/LCARS_doorpanel_off.mdl"
+		"files"
+		{
+			"0"     "models/LCARS/LCARS_doorpanel_off.dx80.vtx"
+			"1"     "models/LCARS/LCARS_doorpanel_off.dx90.vtx"
+			"2"     "models/LCARS/LCARS_doorpanel_off.phy"
+			"3"     "models/LCARS/LCARS_doorpanel_off.sw.vtx"
+			"4"     "models/LCARS/LCARS_doorpanel_off.vvd"
+			"5"     "materials/models/LCARS/door_panel_OFF.vmt"
+			"6"     "materials/models/LCARS/door_panel_OFF.vtf"
+		}
+	}
+
+	"Isolinear Chip - Blue"
+	{
+		"categories"	"gate,chip"
+		"model"			"models/LCARS/LCARS_isoChipB.mdl"
+		"files"
+		{
+			"0"     "models/LCARS/LCARS_isoChipB.dx80.vtx"
+			"1"     "models/LCARS/LCARS_isoChipB.dx90.vtx"
+			"2"     "models/LCARS/LCARS_isoChipB.phy"
+			"3"     "models/LCARS/LCARS_isoChipB.sw.vtx"
+			"4"     "models/LCARS/LCARS_isoChipB.vvd"
+			"5"     "materials/models/LCARS/isoChip_blue.vmt"
+			"6"     "materials/models/LCARS/isoChip_blue.vtf"
+		}
+	}
+
+	"Isolinear Chip - Green"
+	{
+		"categories"	"gate,chip"
+		"model"			"models/LCARS/LCARS_isoChipG.mdl"
+		"files"
+		{
+			"0"     "models/LCARS/LCARS_isoChipG.dx80.vtx"
+			"1"     "models/LCARS/LCARS_isoChipG.dx90.vtx"
+			"2"     "models/LCARS/LCARS_isoChipG.phy"
+			"3"     "models/LCARS/LCARS_isoChipG.sw.vtx"
+			"4"     "models/LCARS/LCARS_isoChipG.vvd"
+			"5"     "materials/models/LCARS/isoChip_green.vmt"
+			"6"     "materials/models/LCARS/isoChip_green.vtf"
+		}
+	}
+
+
+	"Isolinear Chip - Red"
+	{
+		"categories"	"gate,chip"
+		"model"			"models/LCARS/LCARS_isoChipR.mdl"
+		"files"
+		{
+			"0"     "models/LCARS/LCARS_isoChipR.dx80.vtx"
+			"1"     "models/LCARS/LCARS_isoChipR.dx90.vtx"
+			"2"     "models/LCARS/LCARS_isoChipR.phy"
+			"3"     "models/LCARS/LCARS_isoChipR.sw.vtx"
+			"4"     "models/LCARS/LCARS_isoChipR.vvd"
+			"5"     "materials/models/LCARS/isoChip_red.vmt"
+			"6"     "materials/models/LCARS/isoChip_red.vtf"
+		}
+	}
+
+
+	"Isolinear Chip - Yellow"
+	{
+		"categories"	"gate,chip"
+		"model"			"models/LCARS/LCARS_isoChipY.mdl"
+		"files"
+		{
+			"0"     "models/LCARS/LCARS_isoChipY.dx80.vtx"
+			"1"     "models/LCARS/LCARS_isoChipY.dx90.vtx"
+			"2"     "models/LCARS/LCARS_isoChipY.phy"
+			"3"     "models/LCARS/LCARS_isoChipY.sw.vtx"
+			"4"     "models/LCARS/LCARS_isoChipY.vvd"
+			"5"     "materials/models/LCARS/isoChip_yellow.vmt"
+			"6"     "materials/models/LCARS/isoChip_yellow.vtf"
+		}
+	}
+
+	"LCARS Screen"
+	{
+		"categories"	"screen"
+		"model"			"models/props_phx/construct/plastic/plastic_panel2x2.mdl"
+		"files"
+		{
+			"0"     "models/props_phx/construct/plastic/plastic_panel2x2.dx80.vtx"
+			"1"     "models/props_phx/construct/plastic/plastic_panel2x2.dx90.vtx"
+			"2"     "models/props_phx/construct/plastic/plastic_panel2x2.phy"
+			"3"     "models/props_phx/construct/plastic/plastic_panel2x2.sw.vtx"
+			"4"     "models/props_phx/construct/plastic/plastic_panel2x2.vvd"
+			"5"     "materials/phoenix_storms/plastic.vmt"
+			"6"     "materials/phoenix_storms/plastic.vtf"
+		}
+	}
+}

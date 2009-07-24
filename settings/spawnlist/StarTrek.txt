@@ -1,0 +1,16 @@
+"SpawnMenu"
+{
+	"Information"
+	{
+		"version"		"2"
+		"name"		"Star Trek"
+	}
+	"Entries"
+	{
+		"1" 	"models/type11shuttle/type11shuttle.mdl"
+		"2"		"models/LCARS/lcars_isochipr.mdl"
+		"3"		"models/LCARS/lcars_isochipg.mdl"
+		"4"		"models/LCARS/lcars_isochipy.mdl"
+		"5"		"models/LCARS/lcars_isochipb.mdl"
+	}
+}

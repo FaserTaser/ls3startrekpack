@@ -1,0 +1,31 @@
+*******************************************************************************
+* NOTICE:                                                                     *
+* There is no/and will not be a detailed changelog to Revisions prior to 13 ! *
+*******************************************************************************
+
+Rev. 13 (15-08-2008)
+-----------------------------------------------
+> Added Credits.txt and Changelog.txt
+> Added Transporter Platform SENT
+> Added Communicator SWEP
+> Added Phaser TypeII SWEP
+> Added Dilithium Mine SENT
+> Added Dilithium Processor SENT
+> Added Borg Alcove SENT
+> Added Isolinear Chips for Wire (gates)
+> Added Door Panel for Wire (button)
+> Added Prop Spawn list
+> Bug Fixing
+
+
+Rev. 12 (04-06-2008)
+-----------------------------------------------
+> Added Micro Warp Core SENTs
+> Major Bug Fixing
+
+
+Rev. 11 (17-05-2008
+-----------------------------------------------
+>> Initial Release
+
+
