@@ -1,0 +1,15 @@
+Credits go to:
+
+>> Gene Roddenberry for creating Star Trek.
+>> The LS/RD/SB Team since i based the MWC's lua code on the one from LS in order to get it working.
+>> aVoN and PiX06 for creating the Asgard Transporter, which i used as template to create my transporter platform.
+>> elwaywitvac for his Tranq Gun, which were used as a base for the Phaser Stun Setting.
+
+
+
+******************************************************************************************************************
+*                                                                                                                *
+*      If you see some code, textures, models or something else which you made, however i did not credit,        *
+*      please notify me and proper credits will be added.                                                        *
+*                                                                                                                *
+******************************************************************************************************************
