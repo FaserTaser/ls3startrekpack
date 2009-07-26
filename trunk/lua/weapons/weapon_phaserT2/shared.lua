@@ -26,7 +26,7 @@ if ( CLIENT ) then
 	language.Add("weapon_phasert2","Phaser TypeII");
 end
 
-SWEP.Spawnable			= true
+SWEP.Spawnable			= false
 SWEP.AdminSpawnable		= true
 
 SWEP.viewModel = "models/weapons/v_pistol.mdl";
