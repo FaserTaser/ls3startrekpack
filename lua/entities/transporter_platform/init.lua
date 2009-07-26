@@ -36,13 +36,13 @@ function ENT:Initialize()
 
 	self.DestSRC = Vector( 0, 0, 0);
 
-	self.energy = 0;
+	self.energy = 1;
 
 	self.mode = 1;
 
 	self.comBadge = 1;
 
-	RD.AddResource(self.Entity, "energy", 0)
+	self.AddResource(self.Entity, "energy", 0)
 
 
 	if not (WireAddon == nil) then
@@ -268,11 +268,11 @@ function ENT:Teleport(ent,from,to)
 
 		local neededthistime = #self.targets * 1200;
 
-		local energy = RD.GetResourceAmount(self, "energy")
+		local energy = self:GetResourceAmount(self, "energy")
 
 		if(energy >= neededthistime) then
 
-			RD.ConsumeResource(self, "energy", neededthistime)
+			self:ConsumeResource(self, "energy", neededthistime)
 
 			local beamSndOffset = math.Rand(93, 100);
 
