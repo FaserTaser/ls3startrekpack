@@ -767,17 +767,17 @@ function SWEP:Holster()
 	return true;
 end
 
-function SWEP:Reload()
+//function SWEP:Reload()
 	/* DEBUG ONLY FEATURE!*/
-	self.Weapon:EmitSound("weps/swep_switchmode.wav", 125, 100 )
+/*	self.Weapon:EmitSound("weps/swep_switchmode.wav", 125, 100 )
 	
 	local ammo = self.Weapon:Clip1();
 	local set = math.Clamp(ammo+1,0,self.Primary.MaxAmmo);
 	self.Weapon:SetClip1(set);
 	/* DEBUG ONLY FEATURE!*/
 
-	return
-end
+//	return
+//end
 
 function SWEP:DrawHUD()
 	//Show Current Mode
