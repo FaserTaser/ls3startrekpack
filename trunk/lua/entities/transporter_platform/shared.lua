@@ -8,3 +8,4 @@ ENT.Contact		= ""
 ENT.Purpose		= "Transportation"
 ENT.Spawnable		= true
 ENT.AdminSpawnable	= true
+list.Set( "LSEntOverlayText" , "transporter_platform", {HasOOO = true,resnames = {"energy"}} )

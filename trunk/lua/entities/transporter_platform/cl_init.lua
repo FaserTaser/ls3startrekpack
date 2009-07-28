@@ -1,5 +1,5 @@
 include('shared.lua')
-	    
+language.Add("transporter_platform", "Transporter Platform")
     function ENT:Draw()
     // self.BaseClass.Draw(self) -- We want to override rendering, so don't call baseclass.
 	// Use this when you need to add to the rendering.
