@@ -25,13 +25,13 @@ function ENT:Initialize()
     self.health = self.maxhealth
 	self.damaged = 0
 
-	RD.AddResource(self.Entity, "water", 50000)
+	RD.AddResource(self.Entity, "hydrogen", 50000)
 	 
-	RD.SupplyResource(self.Entity, "water", 25000)
+	RD.SupplyResource(self.Entity, "hydrogen", 25000)
 
 	if not (WireAddon == nil) then
 		self.WireDebugName = self.PrintName
-		self.Outputs = Wire_CreateOutputs(self.Entity, { "Water", "Max Water" })
+		self.Outputs = Wire_CreateOutputs(self.Entity, { "Hydrogen", "Max Hydrogen" })
 	end
 end
 
@@ -61,18 +61,18 @@ function ENT:Destruct()
 end
 
 function ENT:Leak()
-	local water = RD.GetResourceAmount(self, "water")
-	if (water >= 100) then
-		RD.ConsumeResource(self, "water", 100)
+	local hydrogen = RD.GetResourceAmount(self, "hydrogen")
+	if (hydrogen >= 100) then
+		RD.ConsumeResource(self, "hydrogen", 100)
 	else
-		RD.ConsumeResource(self, "water", water)
+		RD.ConsumeResource(self, "hydrogen", hydrogen)
 		self.Entity:StopSound( "PhysicsCannister.ThrusterLoop" )
 	end
 end
 
 function ENT:UpdateMass()
 	//change mass
-	local mass = self.mass + (RD.GetResourceAmount(self, "water")/2) // self.mass = default mass
+	local mass = self.mass + (RD.GetResourceAmount(self, "hydrogen")/2) // self.mass = default mass
 	local phys = self.Entity:GetPhysicsObject()
 	if (phys:IsValid()) then
 		if phys:GetMass() != mass then
@@ -100,10 +100,10 @@ function ENT:Think()
 end
 
 function ENT:UpdateWireOutput()
-	local water = RD.GetResourceAmount(self, "water")
-	local maxWater = RD.GetNetworkCapacity(self, "water")
-	Wire_TriggerOutput(self.Entity, "Water", water)
-	Wire_TriggerOutput(self.Entity, "Max Water", maxWater)
-	self.Entity:SetNetworkedInt("water",water)
+	local hydrogen = RD.GetResourceAmount(self, "hydrogen")
+	local maxWater = RD.GetNetworkCapacity(self, "hydrogen")
+	Wire_TriggerOutput(self.Entity, "Hydrogen", hydrogen)
+	Wire_TriggerOutput(self.Entity, "Max Hydrogen", maxWater)
+	self.Entity:SetNetworkedInt("hydrogen",hydrogen)
 	self.Entity:SetNetworkedInt("maxwater",maxWater)
 end
