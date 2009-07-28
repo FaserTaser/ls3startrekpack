@@ -4,7 +4,7 @@ AddCSLuaFile( "shared.lua" )
 include('shared.lua')
 
 local Ground = 1 + 0 + 2 + 8 + 32
-local Water_Increment = 20
+local Hydrogen_Increment = 20
 local Deuterium_Increment = 10
 local Energy_Increment = 50
 local sequence_active = nil
@@ -39,7 +39,7 @@ function ENT:Initialize()
 
 	RD.AddResource(self.Entity, "deuterium", 0)
 
-	RD.AddResource(self.Entity, "water", 0)
+	RD.AddResource(self.Entity, "hydrogen", 0)
 	RD.AddResource(self.Entity, "energy", 0)
 
 
@@ -116,10 +116,10 @@ end
 function ENT:Convert()
 	if (self.Active == 1 ) then
 		self.energy = RD.GetResourceAmount(self, "energy")
-		self.water = RD.GetResourceAmount(self, "water")
+		self.hydrogen = RD.GetResourceAmount(self, "hydrogen")
 		self.deuterium = RD.GetResourceAmount(self, "deuterium")
-		if (self.water >= Water_Increment) and (self.energy >= Energy_Increment) then
-			RD.ConsumeResource(self, "water", Water_Increment)
+		if (self.hydrogen >= Hydrogen_Increment) and (self.energy >= Energy_Increment) then
+			RD.ConsumeResource(self, "hydrogen", Hydrogen_Increment)
 			RD.ConsumeResource(self, "energy", Energy_Increment)
 			RD.SupplyResource(self.Entity, "deuterium", Deuterium_Increment)
 		end
@@ -160,7 +160,7 @@ end
 
 function ENT:UpdateWireOutput()
 	local energy = RD.GetResourceAmount(self, "energy")
-	local hydrogen = RD.GetResourceAmount(self, "water")
+	local hydrogen = RD.GetResourceAmount(self, "hydrogen")
 	local deuterium = RD.GetResourceAmount(self, "deuterium")
 	Wire_TriggerOutput(self.Entity, "Energy Input", energy)
 	Wire_TriggerOutput(self.Entity, "Hydrogen Input", hydrogen)
