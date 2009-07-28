@@ -13,7 +13,7 @@ local Energy_Increment = 500
 
 local Deuterium_Increment = 10
 
-local AntiDeuterium_Increment = 10
+local Antimatter_Increment = 10
 
 local DilithiumCrystal_Increment = 1
 
@@ -69,7 +69,7 @@ function ENT:Initialize()
 
 	RD.AddResource(self.Entity, "deuterium", 0)
 
-	RD.AddResource(self.Entity, "antideuterium", 0)
+	RD.AddResource(self.Entity, "antimatter", 0)
 
 	RD.AddResource(self.Entity, "dilithiumcrystal", 0)
 
@@ -81,7 +81,7 @@ function ENT:Initialize()
 
 		self.Inputs = Wire_CreateInputs(self.Entity, { "On", })
 
-		self.Outputs = Wire_CreateOutputs(self.Entity, { "On", "Energy Output", "Deuterium Input", "AntiDeuterium Input", "DilithiumCrystals Input" })
+		self.Outputs = Wire_CreateOutputs(self.Entity, { "On", "Energy Output", "Deuterium Input", "Antimatter Input", "DilithiumCrystals Input" })
  
 	end
 
@@ -221,15 +221,15 @@ function ENT:GenEnergy()
 
 		self.deuterium = RD.GetResourceAmount(self, "deuterium")
 
-		self.antideuterium = RD.GetResourceAmount(self, "antideuterium")
+		self.antimatter = RD.GetResourceAmount(self, "antimatter")
 
 		self.dilithiumcrystal = RD.GetResourceAmount(self, "dilithiumcrystal")
 
-		if (self.deuterium >= Deuterium_Increment) and (self.antideuterium >= AntiDeuterium_Increment) and (self.dilithiumcrystal >= DilithiumCrystal_Increment) then
+		if (self.deuterium >= Deuterium_Increment) and (self.antimatter >= Antimatter_Increment) and (self.dilithiumcrystal >= DilithiumCrystal_Increment) then
 
 			RD.ConsumeResource(self, "deuterium", Deuterium_Increment)
 
-			RD.ConsumeResource(self, "antideuterium", AntiDeuterium_Increment)
+			RD.ConsumeResource(self, "antimatter", Antimatter_Increment)
 
 			RD.ConsumeResource(self, "dilithiumcrystal", DilithiumCrystal_Increment)
 
@@ -253,12 +253,12 @@ function ENT:Think()
 
 	self.dt = RD.GetResourceAmount(self, "deuterium")
 
-	self.atd = RD.GetResourceAmount(self, "antideuterium")
+	self.atm = RD.GetResourceAmount(self, "antimatter")
 
 	self.dc = RD.GetResourceAmount(self, "dilithiumcrystal")
 
 
-	if (self.Active == 1 and self.dt >= 10 and self.atd >= 10 and self.dc >= 1 ) then
+	if (self.Active == 1 and self.dt >= 10 and self.atm >= 10 and self.dc >= 1 ) then
 
 		self:GenEnergy()
 
@@ -289,7 +289,7 @@ function ENT:UpdateWireOutput()
 
 	local deuterium = RD.GetResourceAmount(self, "deuterium")
 
-	local antiDeuterium = RD.GetResourceAmount(self, "antideuterium")
+	local antimatter = RD.GetResourceAmount(self, "antimatter")
 
 	local dilithiumcrystal = RD.GetResourceAmount(self, "dilithiumcrystal")
 
@@ -297,7 +297,7 @@ function ENT:UpdateWireOutput()
 
 	Wire_TriggerOutput(self.Entity, "Deuterium Input", deuterium)
 
-	Wire_TriggerOutput(self.Entity, "AntiDeuterium Input", antiDeuterium)
+	Wire_TriggerOutput(self.Entity, "Antimatter Input", antimatter)
 
 	Wire_TriggerOutput(self.Entity, "DilithiumCrystals Input", dilithiumcrystal)
 
