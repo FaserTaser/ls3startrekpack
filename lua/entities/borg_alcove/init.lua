@@ -2,17 +2,17 @@ AddCSLuaFile( "cl_init.lua" )
 
 AddCSLuaFile( "shared.lua" )
 
-util.PrecacheSound("borg/borg_amb_loop1.wav")
+//util.PrecacheSound("borg/borg_amb_loop1.wav")
 
-util.PrecacheSound("borg/borg_amb_loop2.wav")
+//util.PrecacheSound("borg/borg_amb_loop2.wav")
 
-util.PrecacheSound("borg/borg_ambcomputer_2.wav")
+//util.PrecacheSound("borg/borg_ambcomputer_2.wav")
 
-util.PrecacheSound("borg/borg_collective01.wav")
+//util.PrecacheSound("borg/borg_collective01.wav")
 
-util.PrecacheSound("borg/borg_collective02.wav")
+//util.PrecacheSound("borg/borg_collective02.wav")
 
-util.PrecacheSound("borg/borg_regen.wav")
+//util.PrecacheSound("borg/borg_regen.wav")
 
 
 include('shared.lua')
