@@ -1,5 +1,5 @@
 ENT.Type 		= "anim"
-ENT.Base 		= "base_gmodentity"
+ENT.Base 		= "base_rd3_entity"
 
 ENT.PrintName	= "Type 11 Shuttle"
 ENT.Author		= "ZeeHtaa"
