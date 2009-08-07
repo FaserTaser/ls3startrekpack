@@ -101,9 +101,9 @@ end
 
 function ENT:UpdateWireOutput()
 	local hydrogen = RD.GetResourceAmount(self, "hydrogen")
-	local maxWater = RD.GetNetworkCapacity(self, "hydrogen")
-	Wire_TriggerOutput(self.Entity, "Hydrogen", hydrogen)
-	Wire_TriggerOutput(self.Entity, "Max Hydrogen", maxWater)
+	local maxhydrogen = RD.GetNetworkCapacity(self, "hydrogen")
+	Wire_TriggerOutput(self.Entity, "hydrogen", hydrogen)
+	Wire_TriggerOutput(self.Entity, "max hydrogen", maxhydrogen)
 	self.Entity:SetNetworkedInt("hydrogen",hydrogen)
-	self.Entity:SetNetworkedInt("maxwater",maxWater)
+	self.Entity:SetNetworkedInt("maxhydrogen",maxhydrogen)
 end
