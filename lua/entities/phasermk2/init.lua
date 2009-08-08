@@ -1,7 +1,7 @@
 
 AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
-util.PrecacheSound( "sound/weps/phaser01_B.wav" )
+util.PrecacheSound( "phaser01_B.wav" )
 
 include('entities/base_wire_entity/init.lua'); 
 include('shared.lua')
@@ -24,7 +24,7 @@ function ENT:Initialize()
 	self.PhaserEnt = SpawnPhaser(self.Entity, self.BeamTarget, self.ID)
 	self.PhaserEnt:Fire("turnoff","",0)
 	self.charge = 100
-	self.fireSound = "sound/weps/phaser01_B.wav.wav"
+	self.fireSound = "phaser01_B.wav"
 end   
 
 function ENT:SpawnFunction( ply, tr)
